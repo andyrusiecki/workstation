@@ -1,0 +1,27 @@
+[org.gnome.desktop.interface]
+clock-show-weekday=true
+color-scheme='prefer-dark'
+font-antialiasing='rgba'
+gtk-theme='adw-gtk3'
+
+[org.gnome.desktop.peripherals.mouse]
+accel-profile='flat'
+
+[org.gnome.desktop.peripherals.touchpad]
+two-finger-scrolling-enabled=true
+
+[org.gnome.desktop.screensaver]
+lock-delay=uint32 1800
+
+[org.gnome.desktop.session]
+idle-delay=uint32 900
+
+[org.gnome.settings-daemon.plugins.color]
+night-light-enabled=true
+night-light-temperature=uint32 3700
+
+[org.gnome.shell]
+favorite-apps=['org.gnome.Nautilus.desktop', 'org.mozilla.firefox.desktop', 'com.google.Chrome.desktop', 'com.slack.Slack.desktop', 'com.spotify.Client.desktop', 'com.discordapp.Discord.desktop', 'org.signal.Signal.desktop', 'com.valvesoftware.Steam.desktop', 'md.obsidian.Obsidian.desktop', 'com.visualstudio.code.desktop', 'com.mitchellh.ghostty.desktop']
+
+[org.gnome.system.location]
+enabled=true

@@ -7,7 +7,7 @@ description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 42 # latest is also supported if you want new updates ASAP
+image-version: 44 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -20,26 +20,167 @@ modules:
   - type: dnf
     repos:
       copr:
+        - atim/lazydocker
         - atim/starship
+        - lihaohong/yazi
+        - scottames/ghostty
+      files:
+        - https://cli.github.com/packages/rpm/gh-cli.repo # github cli
+        - https://kubecolor.github.io/packages/rpm/kubecolor.repo # kubecolor
+
+      nonfree: negativo17
     install:
       packages:
-        - micro
+        - adw-gtk3-theme
+        - awscli2
+        - bat
+        - btop
+        - cabextract
+        - cargo
+        - distrobox
+        - du-dust
+        - eza
+        - fastfetch
+        - fd-find
+        - ffmpeg
+        - ffmpegthumbnailer
+        - fish
+        - fzf
+        - gh
+        - ghostty
+        - git-delta
+        - gnome-tweaks
+        - gnome-shell-extension-appindicator
+        - gnome-shell-extension-caffeine
+        - gnome-shell-extension-just-perfection
+        - golang
+        - helix
+        - kubecolor
+        - kubernetes1.33-client
+        - lazydocker
+        - make
+        - nodejs
+        - nodejs-npm
+        - podman-compose
+        - podman-docker
+        - ripgrep
+        - rust
+        - rust-src
         - starship
+        - tailscale
+        - unrar
+        - wl-clipboard
+        - yazi
+        - yq
+        - zoxide
+        - zsh-autosuggestions
+        - zsh-syntax-highlighting
+
     remove:
       packages:
-        # example: removing firefox (in favor of the flatpak)
-        # "firefox" is the main package, "firefox-langpacks" is a dependency
+        - toolbox
         - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - firefox-langpacks
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - AdwaitaMono
+        - FiraCode
+        - FiraMono
+        - Hack
+        - Meslo
+        - SourceCodePro
+        - Terminus
+        - JetBrainsMono
+        - NerdFontsSymbolsOnly
+      google-fonts:
+        - Roboto
+        - Open Sans
+        - Inter
+
+  - type: script
+    scripts:
+      - install-ms-fonts.sh
+
+  - type: gnome-extensions
+    install:
+      - App Hider
+      - Dash to Dock
+      - In Picture
+      - Night Theme Switcher
+
+  - type: gschema-overrides
+    include:
+      - desktop.gschema.override
+      - extensions.gschema.override
+
+  - type: systemd
+    system:
+      enabled:
+        - tailscaled.service
+    user:
+      enabled:
+        - podman.socket
 
   - type: default-flatpaks
     configurations:
-      - notify: true # Send notification after install/uninstall is finished (true/false)
-        scope: system
-        # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks we want all users to have and not remove
+      - notify: true
+        scope: user
+        install:
+          # Added applications
+          - com.dec05eba.gpu_screen_recorder
+          - com.discordapp.Discord
+          - com.getpostman.Postman
+          - com.github.marhkb.Pods
+          - com.github.mtkennerly.ludusavi
+          - com.github.tchx84.Flatseal
+          - com.google.Chrome
+          - com.mattjakeman.ExtensionManager
+          - com.nextcloud.desktopclient.nextcloud
+          - com.onepassword.OnePassword
+          - com.slack.Slack
+          - com.spotify.Client
+          - com.valvesoftware.Steam
+          - com.visualstudio.code
+          - dev.qwery.AddWater
+          - io.github.Foldex.AdwSteamGtk
+          - io.github.celluloid_player.Celluloid
+          - io.github.realmazharhussain.GdmSettings
+          - it.mijorus.gearlever
+          - md.obsidian.Obsidian
+          - org.libreoffice.LibreOffice
           - org.mozilla.firefox
-          - org.gnome.Loupe
-      - scope: user # Also add Flathub user repo, but no user packages
+          - org.signal.Signal
+          - us.zoom.Zoom
 
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+          # Added runtimes
+          - org.gtk.Gtk3theme.adw-gtk3
+          - org.gtk.Gtk3theme.adw-gtk3-dark
+
+          # Gnome applications
+          - org.gnome.Boxes
+          - org.gnome.Loupe
+          - org.gnome.Calculator
+          - org.gnome.Calendar
+          - org.gnome.Characters
+          - org.gnome.Connections
+          - org.gnome.Contacts
+          - org.gnome.Extensions
+          - org.gnome.Logs
+          - org.gnome.Loupe
+          - org.gnome.Maps
+          - org.gnome.NautilusPreviewer
+          - org.gnome.Papers
+          - org.gnome.Platform
+          - org.gnome.Platform
+          - org.gnome.Snapshot
+          - org.gnome.TextEditor
+          - org.gnome.Weather
+          - org.gnome.World.PikaBackup
+          - org.gnome.baobab
+          - org.gnome.clocks
+          - org.gnome.font-viewer
+
+
+  - type: signing

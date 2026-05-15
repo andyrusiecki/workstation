@@ -1,0 +1,12 @@
+[org.gnome.shell.extensions.caffeine]
+nightlight-control='always'
+
+[org.gnome.shell.extensions.in-picture]
+hide=true
+stick=true
+
+[org.gnome.shell.extensions.just-perfection]
+notification-banner-position=2
+
+[org.gnome.shell.extensions.weather]
+automatic-location=true
