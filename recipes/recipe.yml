@@ -27,6 +27,7 @@ modules:
       files:
         - https://cli.github.com/packages/rpm/gh-cli.repo # github cli
         - https://kubecolor.github.io/packages/rpm/kubecolor.repo # kubecolor
+      nonfree: negativo17
 
     install:
       packages:
@@ -41,6 +42,7 @@ modules:
         - eza
         - fastfetch
         - fd-find
+        - ffmpeg
         - ffmpegthumbnailer
         - fish
         - fzf
@@ -74,11 +76,56 @@ modules:
         - zsh-autosuggestions
         - zsh-syntax-highlighting
 
+        - intel-media-driver
+        - libheif-freeworld
+        - pipewire-codec-aptx
+        #- mesa-va-drivers-freeworld
+        #- mesa-va-drivers-freeworld.i686
+
     remove:
       packages:
         - toolbox
         - firefox
         - firefox-langpacks
+
+    replace:
+      - from-repo: fedora-multimedia
+        packages:
+          - libheif
+          - libva
+          - mesa-dri-drivers
+          - gstreamer1-plugin-libav
+          - mesa-filesystem
+          - mesa-libEGL
+          - mesa-libGL
+          - mesa-libgbm
+          - mesa-va-drivers
+          - mesa-vulkan-drivers
+          - libva-intel-media-driver
+          - intel-gmmlib
+          - intel-mediasdk
+          - old: ffmpeg-free
+            new: ffmpeg
+          - old: fdk-aac-free
+            new: libfdk-aac
+          - old: gstreamer1-plugins-ugly-free
+            new: gstreamer1-plugins-ugly
+          - old: libavcodec-free
+            new: libavcodec
+          - old: libavdevice-free
+            new: libavdevice
+          - old: libavfilter-free
+            new: libavfilter
+          - old: libavformat-free
+            new: libavformat
+          - old: libavutil-free
+            new: libavutil
+          - old: libpostproc-free
+            new: libpostproc
+          - old: libswresample-free
+            new: libswresample
+          - old: libswscale-free
+            new: libswscale
 
   - type: fonts
     fonts:
