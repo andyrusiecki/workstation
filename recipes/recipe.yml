@@ -47,9 +47,6 @@ modules:
         - fzf
         - git-delta
         - gnome-tweaks
-        - gnome-shell-extension-appindicator
-        - gnome-shell-extension-caffeine
-        - gnome-shell-extension-just-perfection
         - golang
         - helix
         - kubernetes1.33-client
@@ -130,7 +127,10 @@ modules:
   - type: gnome-extensions
     install:
       - App Hider
+      - AppIndicator and KStatusNotifierItem Support
+      - Caffeine
       - Dash to Dock
+      - Just Perfection
       - In Picture
       - Night Theme Switcher
 
