@@ -179,6 +179,12 @@ modules:
           - us.zoom.Zoom
 
           # Added runtimes
+          - com.visualstudio.code.tool.podman
+          - org.freedesktop.Platform.ffmpeg-full
+          - org.freedesktop.Sdk.Extension.golang
+          - org.freedesktop.Sdk.Extension.node24
+          - org.freedesktop.Sdk.Extension.rust-stable
+          - org.freedesktop.Sdk.Extension.typescript
           - org.gtk.Gtk3theme.adw-gtk3
           - org.gtk.Gtk3theme.adw-gtk3-dark
 
