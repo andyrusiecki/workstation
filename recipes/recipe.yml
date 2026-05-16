@@ -156,19 +156,19 @@ modules:
         install:
           # Added applications
           - com.dec05eba.gpu_screen_recorder
-          - com.discordapp.Discord
+          #- com.discordapp.Discord
           - com.getpostman.Postman
           - com.github.marhkb.Pods
           - com.github.mtkennerly.ludusavi
           - com.github.tchx84.Flatseal
-          - com.google.Chrome
+          #- com.google.Chrome
           - com.mattjakeman.ExtensionManager
           - com.nextcloud.desktopclient.nextcloud
-          - com.onepassword.OnePassword
+          #- com.onepassword.OnePassword
           - com.slack.Slack
           - com.spotify.Client
-          - com.valvesoftware.Steam
-          - com.visualstudio.code
+          #- com.valvesoftware.Steam
+          #- com.visualstudio.code
           - dev.qwery.AddWater
           - io.github.Foldex.AdwSteamGtk
           - io.github.celluloid_player.Celluloid
@@ -176,7 +176,7 @@ modules:
           - it.mijorus.gearlever
           - md.obsidian.Obsidian
           - org.libreoffice.LibreOffice
-          - org.mozilla.firefox
+          #- org.mozilla.firefox
           - org.signal.Signal
           - us.zoom.Zoom
 
