@@ -80,8 +80,8 @@ modules:
         # rpmfusion
         - intel-media-driver
         - libheif-freeworld
-        - mesa-va-drivers-freeworld
-        - mesa-va-drivers-freeworld.i686
+        # - mesa-va-drivers-freeworld
+        # - mesa-va-drivers-freeworld.i686
         - pipewire-codec-aptx
 
     remove:
@@ -90,19 +90,19 @@ modules:
         - firefox
         - firefox-langpacks
 
-    replace:
-      - from-repo: fedora-multimedia
-        allow-erasing: true
-        packages:
-          - old: ffmpeg-free
-            new: ffmpeg
+    # replace:
+    #   - from-repo: fedora-multimedia
+    #     allow-erasing: true
+    #     packages:
+    #       - old: ffmpeg-free
+    #         new: ffmpeg
 
-    group-install:
-      install-weak-deps: false
-      exclude:
-        - PackageKit-gstreamer-plugin
-      packages:
-        - multimedia
+    # group-install:
+    #   install-weak-deps: false
+    #   exclude:
+    #     - PackageKit-gstreamer-plugin
+    #   packages:
+    #     - multimedia
 
   - type: fonts
     fonts:
