@@ -27,7 +27,7 @@ modules:
       files:
         - https://cli.github.com/packages/rpm/gh-cli.repo # github cli
         - https://kubecolor.github.io/packages/rpm/kubecolor.repo # kubecolor
-      nonfree: negativo17
+      nonfree: rpmfusion
 
     install:
       packages:
@@ -42,12 +42,9 @@ modules:
         - eza
         - fastfetch
         - fd-find
-        - ffmpeg
         - ffmpegthumbnailer
         - fish
         - fzf
-        - gh
-        - ghostty
         - git-delta
         - gnome-tweaks
         - gnome-shell-extension-appindicator
@@ -55,9 +52,7 @@ modules:
         - gnome-shell-extension-just-perfection
         - golang
         - helix
-        - kubecolor
         - kubernetes1.33-client
-        - lazydocker
         - make
         - nodejs
         - nodejs-npm
@@ -66,21 +61,28 @@ modules:
         - ripgrep
         - rust
         - rust-src
-        - starship
         - tailscale
         - unrar
         - wl-clipboard
-        - yazi
         - yq
         - zoxide
         - zsh-autosuggestions
         - zsh-syntax-highlighting
 
+        # copr + custom repos
+        - gh
+        - ghostty
+        - lazydocker
+        - kubecolor
+        - starship
+        - yazi
+
+        # rpmfusion
         - intel-media-driver
         - libheif-freeworld
+        - mesa-va-drivers-freeworld
+        - mesa-va-drivers-freeworld.i686
         - pipewire-codec-aptx
-        #- mesa-va-drivers-freeworld
-        #- mesa-va-drivers-freeworld.i686
 
     remove:
       packages:
@@ -90,42 +92,17 @@ modules:
 
     replace:
       - from-repo: fedora-multimedia
+        allow-erasing: true
         packages:
-          - libheif
-          - libva
-          - mesa-dri-drivers
-          - gstreamer1-plugin-libav
-          - mesa-filesystem
-          - mesa-libEGL
-          - mesa-libGL
-          - mesa-libgbm
-          - mesa-va-drivers
-          - mesa-vulkan-drivers
-          - libva-intel-media-driver
-          - intel-gmmlib
-          - intel-mediasdk
           - old: ffmpeg-free
             new: ffmpeg
-          - old: fdk-aac-free
-            new: libfdk-aac
-          - old: gstreamer1-plugins-ugly-free
-            new: gstreamer1-plugins-ugly
-          - old: libavcodec-free
-            new: libavcodec
-          - old: libavdevice-free
-            new: libavdevice
-          - old: libavfilter-free
-            new: libavfilter
-          - old: libavformat-free
-            new: libavformat
-          - old: libavutil-free
-            new: libavutil
-          - old: libpostproc-free
-            new: libpostproc
-          - old: libswresample-free
-            new: libswresample
-          - old: libswscale-free
-            new: libswscale
+
+    group-install:
+      install-weak-deps: false
+      exclude:
+        - PackageKit-gstreamer-plugin
+      packages:
+        - multimedia
 
   - type: fonts
     fonts:
@@ -145,6 +122,8 @@ modules:
         - Inter
 
   - type: script
+    snippets:
+      - "ln -sf /usr/bin/podman-compose /usr/bin/docker-compose"
     scripts:
       - install-ms-fonts.sh
 
