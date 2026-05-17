@@ -218,16 +218,18 @@ modules:
     repos:
       keys:
         - https://downloads.1password.com/linux/keys/1password.asc # 1password
+        - https://dl.google.com/linux/linux_signing_key.pub # google chrome
         - https://packages.microsoft.com/keys/microsoft.asc # vscode
       files:
         - 1password.repo # 1password
+        - google-chrome.repo # google chrome
         - vscode.repo # vscode
 
     install:
       packages:
         - 1password
         - code
-        - discord
+        - https://discord.com/api/download?platform=linux&format=rpm # discord
         - firefox
         - firefox-langpacks
         - google-chrome-stable
