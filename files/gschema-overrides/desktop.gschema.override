@@ -21,7 +21,7 @@ night-light-enabled=true
 night-light-temperature=uint32 3700
 
 [org.gnome.shell]
-favorite-apps=['org.gnome.Nautilus.desktop', 'org.mozilla.firefox.desktop', 'com.google.Chrome.desktop', 'com.slack.Slack.desktop', 'com.spotify.Client.desktop', 'com.discordapp.Discord.desktop', 'org.signal.Signal.desktop', 'com.valvesoftware.Steam.desktop', 'md.obsidian.Obsidian.desktop', 'com.visualstudio.code.desktop', 'com.mitchellh.ghostty.desktop']
+favorite-apps=['org.gnome.Nautilus.desktop', 'org.mozilla.firefox.desktop', 'google-chrome.desktop', 'com.slack.Slack.desktop', 'com.spotify.Client.desktop', 'discord.desktop', 'org.signal.Signal.desktop', 'steam.desktop', 'md.obsidian.Obsidian.desktop', 'code.desktop', 'com.mitchellh.ghostty.desktop']
 
 [org.gnome.system.location]
 enabled=true
