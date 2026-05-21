@@ -40,78 +40,71 @@ modules:
 
     install:
       packages:
-        - 1password
+        # GNOME additions
         - adw-gtk3-theme
+        - ffmpegthumbnailer
+        - gnome-tweaks
+
+        # Development tools
+        - cargo
+        - code
+        - git-delta
+        - golang
+        - kubecolor
+        - kubernetes1.33-client
+        - make
+        - nodejs
+        - nodejs-npm
+        - rust
+        - rust-src
+
+        # Terminal and shells
+        - fish
+        - ghostty
+        - starship
+        - zsh-autosuggestions
+        - zsh-syntax-highlighting
+
+        # CLI tools and tui apps
         - awscli2
         - bat
         - btop
-        - cabextract
-        - cargo
-        - code
-        - https://discord.com/api/download?platform=linux&format=rpm # discord
-        - distrobox
         - du-dust
         - eza
         - fastfetch
         - fd-find
-        - ffmpegthumbnailer
-        - fish
         - fzf
-        - git-delta
-        - gnome-tweaks
-        - golang
-        - google-chrome-stable
-        - kubernetes1.33-client
-        - make
+        - gh
+        - lazydocker
         - neovim
-        - nodejs
-        - nodejs-npm
-        - podman-compose
-        - podman-docker
         - ripgrep
-        - rust
-        - rust-src
-        - steam
-        - tailscale
-        - unrar
         - wl-clipboard
+        - yazi
         - yq
         - zoxide
-        - zsh-autosuggestions
-        - zsh-syntax-highlighting
 
-        # copr + custom repos
-        - gh
-        - ghostty
-        - lazydocker
-        - kubecolor
-        - starship
-        - yazi
+        # Containers and virtualization
+        - distrobox
+        - podman-compose
+        - podman-docker
 
-        # rpmfusion
-        # - intel-media-driver
-        #- libheif-freeworld
-        # - mesa-va-drivers-freeworld
-        # - mesa-va-drivers-freeworld.i686
-        # - pipewire-codec-aptx
+        # Browsers
+        - google-chrome-stable
+
+        # Gaming
+        - https://discord.com/api/download?platform=linux&format=rpm # discord
+        - mangohud
+        - steam
+
+        # Misc utilities
+        - 1password
+        - cabextract
+        - tailscale
+        - unrar
 
     remove:
       packages:
         - toolbox
-
-    # replace:
-    #   - from-repo: fedora-multimedia
-    #     allow-erasing: true
-    #     packages:
-    #       - old: ffmpeg-free
-    #         new: ffmpeg
-
-    # group-install:
-    #   install-weak-deps: false
-    #   exclude:
-    #     - PackageKit-gstreamer-plugin
-    #   packages:
-    #     - multimedia
 
   - type: fonts
     fonts:
