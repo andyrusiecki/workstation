@@ -99,6 +99,7 @@ modules:
         # Misc utilities
         - 1password
         - cabextract
+        - restic
         - tailscale
         - unrar
 
