@@ -170,7 +170,7 @@ modules:
 
   - type: default-flatpaks
     configurations:
-      - notify: true
+      - notify: false
         scope: user
         install:
           # Added applications
