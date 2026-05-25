@@ -143,6 +143,7 @@ modules:
     snippets:
       - "ln -sf /usr/bin/podman-compose /usr/bin/docker-compose"
     scripts:
+      - install-low-latency-layer.sh
       - install-ms-fonts.sh
 
   - type: gnome-extensions
