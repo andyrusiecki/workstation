@@ -17,7 +17,6 @@ dnf install --installroot=$root --use-host-config -y "${dependencies[@]}"
 chroot $root /bin/bash -c ""
 
 git clone --depth 1 https://github.com/Korthos-Software/low_latency_layer.git $root/low_latency_layer
-cd low_latency_layer
 
 # build in chroot
 chroot $root /bin/bash -c "cd /low_latency_layer && cmake -B build ./ && cd build && make install"
