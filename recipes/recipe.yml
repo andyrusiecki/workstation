@@ -172,7 +172,7 @@ modules:
   - type: default-flatpaks
     configurations:
       - notify: false
-        scope: user
+        scope: system
         install:
           # Added applications
           - com.dec05eba.gpu_screen_recorder
