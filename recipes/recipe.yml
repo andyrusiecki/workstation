@@ -219,4 +219,14 @@ modules:
           - org.gnome.clocks
           - org.gnome.font-viewer
 
+  # testing cachy-os kernel
+  - type: dnf
+    repos:
+      copr:
+        - bieszczaders/kernel-cachyos
+    install:
+      packages:
+        - kernel-cachyos
+        - kernel-cachyos-devel-matched
+
   - type: signing
