@@ -225,8 +225,8 @@ modules:
       copr:
         - bieszczaders/kernel-cachyos
     replace:
-      packages:
-        - old:
+      - packages:
+          old:
             - kernel
             - kernel-core
             - kernel-modules
