@@ -105,7 +105,6 @@ modules:
         - cabextract
         - chezmoi
         - nextcloud-client
-        - restic
         - tailscale
         - unrar
 
