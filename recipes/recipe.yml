@@ -141,7 +141,7 @@ modules:
 
   - type: script
     snippets:
-      - "rm /etc/skel/.config/mozilla"
+      - "rm -r /etc/skel/.config/mozilla"
       - "ln -sf /usr/bin/podman-compose /usr/bin/docker-compose"
     scripts:
       - install-low-latency-layer.sh
