@@ -1,0 +1,4 @@
+# Meletrix Zoom65 v3
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="36b5", ATTRS{idProduct}=="287f", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTRS{idVendor}=="36b5", ATTRS{idProduct}=="287f", TAG+="uaccess"
+

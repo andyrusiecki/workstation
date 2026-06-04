@@ -1,0 +1,2 @@
+# Mode Sixtyfive (2024)
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", ATTRS{idVendor}=="00de", ATTRS{idProduct}=="5754", GROUP="users", TAG+="uaccess", TAG+="udev-acl"

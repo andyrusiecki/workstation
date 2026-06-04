@@ -1,0 +1,2 @@
+# Lucky65 v3
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", ATTRS{idVendor}=="342d", ATTRS{idProduct}=="e538", GROUP="users", TAG+="uaccess", TAG+="udev-acl"

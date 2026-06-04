@@ -1,0 +1,2 @@
+# Desktop - blocking onboard bluetooth for ASUS x470i
+SUBSYSTEM=="usb", ATTRS{idVendor}=="0b05", ATTRS{idProduct}=="185c", ATTR{authorized}="0"
