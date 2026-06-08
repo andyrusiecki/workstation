@@ -58,6 +58,7 @@ modules:
         - make
         - nodejs
         - nodejs-npm
+        - https://opencode.ai/download/stable/linux-x64-rpm # OpenCode Desktop
         - rust
         - rust-src
 
@@ -110,6 +111,7 @@ modules:
 
     remove:
       packages:
+        - fedora-bookmarks
         - toolbox
 
   - type: brew
