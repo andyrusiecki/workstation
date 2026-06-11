@@ -146,6 +146,7 @@ modules:
     snippets:
       - "rm -r /etc/skel/.config/mozilla"
       - "ln -sf /usr/bin/podman-compose /usr/bin/docker-compose"
+      - "curl https://raw.githubusercontent.com/aunetx/blur-my-shell/refs/heads/master/scripts/rounded_blur_build.sh | bash -s -- -i"
     scripts:
       - install-low-latency-layer.sh
       - install-ms-fonts.sh
@@ -154,11 +155,13 @@ modules:
     install:
       - App Hider
       - AppIndicator and KStatusNotifierItem Support
+      - Blur my Shell
       - Caffeine
       - Dash to Dock
       - Just Perfection
       - In Picture
       - Night Theme Switcher
+      - Rounded Window Corners Reborn
 
   - type: gschema-overrides
     include:
