@@ -53,6 +53,7 @@ modules:
         - git-delta
         - git-lfs
         - golang
+        - golangci-lint
         - kubecolor
         - kubernetes1.33-client
         - make
