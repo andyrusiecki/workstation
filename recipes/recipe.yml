@@ -26,11 +26,13 @@ modules:
         - scottames/ghostty
 
       keys:
+        - https://downloads.1password.com/linux/keys/1password.asc # 1password
         - https://cli.github.com/packages/githubcli-archive-keyring.asc # github cli
         - https://dl.google.com/linux/linux_signing_key.pub # google chrome
         - https://packages.microsoft.com/keys/microsoft.asc # vscode
 
       files:
+        - 1password.repo # 1password
         - claude-code.repo # claude code
         - https://cli.github.com/packages/rpm/gh-cli.repo # github cli
         - google-chrome.repo # google chrome
@@ -100,6 +102,8 @@ modules:
         - steam
 
         # Misc utilities
+        - 1password
+        - 1password-cli
         - cabextract
         - chezmoi
         - fuse-libs
@@ -111,10 +115,6 @@ modules:
       packages:
         - fedora-bookmarks
         - toolbox
-
-  - type: bling
-    install:
-        - 1password # install 1Password (stable) and `op` CLI tool
 
   - type: brew
     nofile-limits: true
