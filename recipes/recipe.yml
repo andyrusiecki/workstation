@@ -150,6 +150,8 @@ modules:
       - "rm -r /etc/skel/.config/mozilla"
       - "ln -sf /usr/bin/podman-compose /usr/bin/docker-compose"
       - "curl https://raw.githubusercontent.com/aunetx/blur-my-shell/refs/heads/master/scripts/rounded_blur_build.sh | bash -s -- -i"
+      - "rm /usr/lib/sysusers.d/30-rpmostree-pkg-group-onepassword-mcp.conf"
+      - "chgrp 1700 /opt/1Password/onepassword-mcp; chmod g+s /opt/1Password/onepassword-mcp"
     scripts:
       - install-low-latency-layer.sh
       - install-ms-fonts.sh
