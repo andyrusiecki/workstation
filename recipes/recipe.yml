@@ -190,12 +190,15 @@ modules:
           - com.github.marhkb.Pods
           - com.github.mtkennerly.ludusavi
           - com.github.tchx84.Flatseal
+          - com.google.AndroidStudio
           - com.mattjakeman.ExtensionManager
           - com.slack.Slack
           - com.spotify.Client
+          - com.vysp3r.ProtonPlus
           - dev.qwery.AddWater
           - io.github.Foldex.AdwSteamGtk
           - io.github.celluloid_player.Celluloid
+          - io.github.flattool.Warehouse 
           - io.github.realmazharhussain.GdmSettings
           - it.mijorus.gearlever
           - md.obsidian.Obsidian
