@@ -114,7 +114,9 @@ modules:
 
   - type: bling
     install:
-        - 1password # install 1Password (stable) and `op` CLI tool
+        # install 1Password (stable) and `op` CLI tool
+        # bling module contains needed GID fixes
+        - 1password 
 
   - type: brew
     nofile-limits: true
