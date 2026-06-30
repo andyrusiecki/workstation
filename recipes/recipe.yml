@@ -55,8 +55,10 @@ modules:
         - kubecolor
         - kubernetes1.33-client
         - make
+        - mkcert
         - nodejs
         - nodejs-npm
+        - nss-tools
         - https://opencode.ai/download/stable/linux-x64-rpm # OpenCode Desktop
         - rust
         - rust-src
@@ -116,7 +118,7 @@ modules:
     install:
         # install 1Password (stable) and `op` CLI tool
         # bling module contains needed GID fixes
-        - 1password 
+        - 1password
 
   - type: brew
     nofile-limits: true
@@ -200,7 +202,7 @@ modules:
           - dev.qwery.AddWater
           - io.github.Foldex.AdwSteamGtk
           - io.github.celluloid_player.Celluloid
-          - io.github.flattool.Warehouse 
+          - io.github.flattool.Warehouse
           - io.github.realmazharhussain.GdmSettings
           - it.mijorus.gearlever
           - md.obsidian.Obsidian
