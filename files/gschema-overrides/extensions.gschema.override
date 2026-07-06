@@ -8,7 +8,6 @@ stick=true
 [org.gnome.shell.extensions.just-perfection]
 notification-banner-position=2
 support-notifier-type=0
-window-demands-attention-focus=true
 
 [org.gnome.shell.extensions.weather]
 automatic-location=true
