@@ -116,8 +116,8 @@ modules:
 
   - type: bling
     env:
-      GID_ONEPASSWORD: 1500
-      GID_ONEPASSWORDCLI: 1600
+      GID_ONEPASSWORD: '1500'
+      GID_ONEPASSWORDCLI: '1600'
     install:
         # install 1Password (stable) and `op` CLI tool
         # bling module contains needed GID fixes
@@ -152,7 +152,7 @@ modules:
 
   - type: script
     env:
-      GID_ONEPASSWORDMCP: 1700
+      GID_ONEPASSWORDMCP: '1700'
     snippets:
       - "rm -r /etc/skel/.config/mozilla"
       - "ln -sf /usr/bin/podman-compose /usr/bin/docker-compose"
