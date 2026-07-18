@@ -1,6 +1,13 @@
 # workstation &nbsp; [![bluebuild build badge](https://github.com/andyrusiecki/workstation/actions/workflows/build.yml/badge.svg)](https://github.com/andyrusiecki/workstation/actions/workflows/build.yml)
 
-My personal GNOME desktop for combined work and home use.
+My personal desktop for combined work and home use.
+
+## Variants
+
+`workstation` - GNOME desktop environment - stable / daily driver
+`workstation-sway` - Sway window manager - experimental
+
+Note: Instructions below all use `workstation` as the image name.
 
 ## Installation
 
