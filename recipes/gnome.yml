@@ -1,0 +1,45 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/<user>/<name>
+name: workstation-gnome
+# description will be included in the image's metadata
+description: Personal workstation using GNOME
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/silverblue-main
+image-version: 44 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - from-file: common-modules.yaml
+
+  - type: dnf
+    install:
+      packages:
+        # GNOME additions
+        - ffmpegthumbnailer
+        - gnome-tweaks
+
+  - type: script
+    snippets:
+      - "curl https://raw.githubusercontent.com/aunetx/blur-my-shell/refs/heads/master/scripts/rounded_blur_build.sh | bash -s -- -i"
+
+  - type: gnome-extensions
+    install:
+      - App Hider
+      - AppIndicator and KStatusNotifierItem Support
+      - Blur my Shell
+      - Caffeine
+      - Dash to Dock
+      - Just Perfection
+      - In Picture
+      - Night Theme Switcher
+      - Rounded Window Corners Reborn
+
+  - type: gschema-overrides
+    include:
+      - desktop.gschema.override
+      - extensions.gschema.override
+
+  - type: signing

@@ -1,16 +1,6 @@
 ---
-# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-# image will be published to ghcr.io/<user>/<name>
-name: workstation
-# description will be included in the image's metadata
-description: This is my personal OS image.
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
 
-# the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 44 # latest is also supported if you want new updates ASAP
-
-# module configuration, executed in order
-# you can include multiple instances of the same module
 modules:
   - type: files
     files:
@@ -116,9 +106,9 @@ modules:
 
   - type: bling
     install:
-        # install 1Password (stable) and `op` CLI tool
-        # bling module contains needed GID fixes
-        - 1password
+      # install 1Password (stable) and `op` CLI tool
+      # bling module contains needed GID fixes
+      - 1password
 
   - type: brew
     nofile-limits: true
@@ -151,28 +141,10 @@ modules:
     snippets:
       - "rm -r /etc/skel/.config/mozilla"
       - "ln -sf /usr/bin/podman-compose /usr/bin/docker-compose"
-      - "curl https://raw.githubusercontent.com/aunetx/blur-my-shell/refs/heads/master/scripts/rounded_blur_build.sh | bash -s -- -i"
     scripts:
       - fix-onepassword-mcp.sh
       - install-low-latency-layer.sh
       - install-ms-fonts.sh
-
-  - type: gnome-extensions
-    install:
-      - App Hider
-      - AppIndicator and KStatusNotifierItem Support
-      - Blur my Shell
-      - Caffeine
-      - Dash to Dock
-      - Just Perfection
-      - In Picture
-      - Night Theme Switcher
-      - Rounded Window Corners Reborn
-
-  - type: gschema-overrides
-    include:
-      - desktop.gschema.override
-      - extensions.gschema.override
 
   - type: systemd
     system:
@@ -213,7 +185,7 @@ modules:
           - org.gtk.Gtk3theme.adw-gtk3
           - org.gtk.Gtk3theme.adw-gtk3-dark
 
-          # Gnome applications
+          # Gnome applications (likely to move to gnome recipe)
           - org.gnome.Boxes
           - org.gnome.Loupe
           - org.gnome.Calculator
@@ -235,4 +207,3 @@ modules:
           - org.gnome.clocks
           - org.gnome.font-viewer
 
-  - type: signing
