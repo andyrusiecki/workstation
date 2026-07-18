@@ -143,7 +143,6 @@ modules:
       - "ln -sf /usr/bin/podman-compose /usr/bin/docker-compose"
     scripts:
       - fix-onepassword-mcp.sh
-      - install-low-latency-layer.sh
       - install-ms-fonts.sh
 
   - type: systemd
