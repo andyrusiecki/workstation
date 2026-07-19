@@ -21,7 +21,7 @@ modules:
     group-install:
       packages:
         - swaywm
-        - swayvm-extended
+        - swaywm-extended
     install:
       packages:
         - brightnessctl
