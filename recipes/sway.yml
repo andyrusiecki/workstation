@@ -15,24 +15,20 @@ modules:
   - from-file: common-modules.yml
 
   - type: dnf
+    group-remove:
+      packages:
+        - gnome-desktop
+    group-install:
+      packages:
+        - swaywm
+        - swayvm-extended
     install:
       packages:
         - brightnessctl
-        - dunst
-        - kanshi
         - matugen
         - rofi
-        - sway
-        - swaybg
-        - swayidle
-        - swaylock
-        - swayidle
         - sway-contrib
         - sway-systemd
-        - waybar
         - wiremix
-        - wlsunset
-        - xdg-desktop-portal-gtk
-        - xdg-desktop-portal-wlr
 
   - type: signing
