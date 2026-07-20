@@ -15,10 +15,8 @@ modules:
   - from-file: common-modules.yml
 
   - type: dnf
-    group-remove:
-      packages:
-        - gnome-desktop
     group-install:
+      allow-erasing: true
       packages:
         - swaywm
         - swaywm-extended
@@ -28,7 +26,6 @@ modules:
         - matugen
         - rofi
         - sway-contrib
-        - sway-systemd
         - wiremix
 
   - type: signing

@@ -29,11 +29,6 @@ modules:
 
     install:
       packages:
-        # GNOME additions
-        - adw-gtk3-theme
-        - ffmpegthumbnailer
-        - gnome-tweaks
-
         # Development tools
         - cargo
         - claude-code
