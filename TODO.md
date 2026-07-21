@@ -1,0 +1,29 @@
+# Sway
+- [ ] base sway config
+  - [ ] exec
+    - [ ] kanshi pointing to /etc config
+    - [ ] wlsunset (with custom script)
+    - [ ] swaybg wallpaper
+  - [ ] input configurations
+  - [ ] look and feel
+    - [ ] basic theming
+    - [ ] updating matugen theme selector
+  - [ ] new window rules
+     - [ ] inhibit idle for fullscreen games or browser (maybe anything; should work with wlsunset and swayidle)
+  - [ ] keybinds
+    - [ ] base actions (quit, launching, fullscreen, etc)
+    - [ ] app launching
+    - [ ] laptop lid
+    - [ ] media
+    - [ ] screenshots (maybe with flameshot?)
+    - [ ] screen recording
+- [ ] rofi - migrate configs
+- [ ] dunst - migrate configs
+- [ ] waybar - migrate configs
+- [ ] setup kanshi default config in /etc
+- [ ] custom script to set wlsunset params
+- [ ] swaylock and swayidle configs
+- [ ] migrate from hyprland dotfiles
+  - [ ] scripts
+  - [ ] window rules
+
