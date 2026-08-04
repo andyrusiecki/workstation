@@ -86,7 +86,6 @@ modules:
         - gamescope
         - mangohud
         - steam
-        - steam-devices
 
         # Misc utilities
         - cabextract
