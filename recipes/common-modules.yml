@@ -86,6 +86,10 @@ modules:
         - gamescope
         - mangohud
         - steam
+        # Extra deps for EmuDeck install
+        - lsb_release
+        - newt
+        - SDL2
 
         # Misc utilities
         - cabextract
