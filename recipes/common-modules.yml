@@ -99,7 +99,7 @@ modules:
     group-install:
       with-optional: true
       packages:
-        virtualization
+        - virtualization
 
     remove:
       packages:
