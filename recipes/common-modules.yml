@@ -30,6 +30,7 @@ modules:
     install:
       packages:
         # Development tools
+        - age
         - cargo
         - claude-code
         - code
