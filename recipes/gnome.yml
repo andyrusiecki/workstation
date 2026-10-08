@@ -15,17 +15,16 @@ modules:
   - from-file: common-modules.yml
 
   - type: dnf
-    repos:
-      copr:
-        - aneagle/gnome-rounded-blur
-
     install:
       packages:
         # GNOME additions
         - adw-gtk3-theme
         - ffmpegthumbnailer
         - gnome-tweaks
-        - gnome-rounded-blur
+
+  - type: script
+    scripts:
+      - install-gnome-rounded-blur.sh
 
   - type: gnome-extensions
     install:
