@@ -27,11 +27,14 @@ modules:
       cleanup: true
       copr:
         - name: ublue-os/packages
-          excludepkgs: "*"
 
     install:
-      - package: gnome-rounded-blur
-        repo: copr:copr.fedorainfracloud.org:ublue-os:packages
+      - repo: copr:copr.fedorainfracloud.org:ublue-os:packages
+        packages:
+          - gnome-rounded-blur
+        exclude:
+          - "*"
+
 
   - type: gnome-extensions
     install:
