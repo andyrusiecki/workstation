@@ -22,9 +22,16 @@ modules:
         - ffmpegthumbnailer
         - gnome-tweaks
 
-  - type: script
-    scripts:
-      - install-gnome-rounded-blur.sh
+  - type: dnf
+    repos:
+      cleanup: true
+      copr:
+        - name: ublue-os/packages
+          excludepkgs: "*"
+
+    install:
+      - package: gnome-rounded-blur
+        repo: copr:copr.fedorainfracloud.org:ublue-os:packages
 
   - type: gnome-extensions
     install:
