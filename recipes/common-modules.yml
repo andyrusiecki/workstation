@@ -9,6 +9,10 @@ modules:
 
   - type: dnf
     repos:
+      cleanup: true
+
+      nonfree: negativo17
+
       copr:
         - atim/lazydocker
         - atim/starship
@@ -16,11 +20,13 @@ modules:
         - scottames/ghostty
 
       keys:
+        - https://downloads.1password.com/linux/keys/1password.asc # 1password
         - https://cli.github.com/packages/githubcli-archive-keyring.asc # github cli
         - https://dl.google.com/linux/linux_signing_key.pub # google chrome
         - https://packages.microsoft.com/keys/microsoft.asc # vscode
 
       files:
+        - 1password.repo # 1password
         - claude-code.repo # claude code
         - https://cli.github.com/packages/rpm/gh-cli.repo # github cli
         - google-chrome.repo # google chrome
@@ -89,6 +95,8 @@ modules:
         - steam
 
         # Misc utilities
+        - 1password
+        - 1password-cli
         - cabextract
         - chezmoi
         - fuse-libs
@@ -100,12 +108,6 @@ modules:
       packages:
         - fedora-bookmarks
         - toolbox
-
-  - type: bling
-    install:
-      # install 1Password (stable) and `op` CLI tool
-      # bling module contains needed GID fixes
-      - 1password
 
   - type: brew
     nofile-limits: true
@@ -139,7 +141,7 @@ modules:
       - "rm -r /etc/skel/.config/mozilla"
       - "ln -sf /usr/bin/podman-compose /usr/bin/docker-compose"
     scripts:
-      - fix-onepassword-mcp.sh
+      - onepassword-afterinstall.sh
       - install-ms-fonts.sh
 
   - type: systemd
