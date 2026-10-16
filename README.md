@@ -12,11 +12,15 @@ Note: Instructions below all use `workstation` as the image name.
 
 ## Installation
 
+- Reboot again to complete the installation
+  ```
+  systemctl reboot
+  ```
 To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/andyrusiecki/workstation:latest
+  bootc switch ghcr.io/andyrusiecki/workstation:latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -24,7 +28,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/andyrusiecki/workstation:latest
+  bootc switch --enforce-container-sigpolicy ghcr.io/andyrusiecki/workstation:latest
   ```
 - Reboot again to complete the installation
   ```
