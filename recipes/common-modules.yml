@@ -9,6 +9,8 @@ modules:
 
   - type: dnf
     repos:
+      nonfree: negativo17
+
       copr:
         - atim/lazydocker
         - atim/starship
