@@ -206,4 +206,5 @@ modules:
           - org.gnome.baobab
           - org.gnome.clocks
           - org.gnome.font-viewer
+          - org.gnome.gitlab.somas.Apostrophe
 
