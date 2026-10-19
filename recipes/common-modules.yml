@@ -16,6 +16,7 @@ modules:
       copr:
         - atim/lazydocker
         - atim/starship
+        - dejan/lazygit
         - lihaohong/yazi
         - scottames/ghostty
 
@@ -73,6 +74,7 @@ modules:
         - fzf
         - gh
         - lazydocker
+        - lazygit
         - neovim
         - ripgrep
         - wl-clipboard
