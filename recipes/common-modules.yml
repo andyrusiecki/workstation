@@ -87,7 +87,6 @@ modules:
         - distrobox
         - https://desktop.docker.com/linux/main/amd64/docker-desktop-x86_64.rpm # docker-desktop
         - podman-compose
-        - podman
 
         # Browsers
         - google-chrome-stable
