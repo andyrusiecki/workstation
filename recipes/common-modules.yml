@@ -29,6 +29,7 @@ modules:
       files:
         - 1password.repo # 1password
         - claude-code.repo # claude code
+        - https://download.docker.com/linux/fedora/docker-ce.repo # docker
         - https://cli.github.com/packages/rpm/gh-cli.repo # github cli
         - google-chrome.repo # google chrome
         - https://kubecolor.github.io/packages/rpm/kubecolor.repo # kubecolor
@@ -84,8 +85,8 @@ modules:
 
         # Containers and virtualization
         - distrobox
+        - https://desktop.docker.com/linux/main/amd64/docker-desktop-x86_64.rpm # docker-desktop
         - podman-compose
-        - podman-docker
 
         # Browsers
         - google-chrome-stable
@@ -141,7 +142,6 @@ modules:
   - type: script
     snippets:
       - "rm -r /etc/skel/.config/mozilla"
-      - "ln -sf /usr/bin/podman-compose /usr/bin/docker-compose"
     scripts:
       - onepassword-afterinstall.sh
       - install-ms-fonts.sh
