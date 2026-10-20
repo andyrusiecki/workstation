@@ -73,7 +73,6 @@ modules:
         - fd-find
         - fzf
         - gh
-        - lazydocker
         - lazygit
         - neovim
         - ripgrep
