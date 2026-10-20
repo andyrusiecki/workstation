@@ -14,7 +14,6 @@ modules:
       nonfree: negativo17
 
       copr:
-        - atim/lazydocker
         - atim/starship
         - dejan/lazygit
         - lihaohong/yazi
@@ -149,6 +148,7 @@ modules:
     scripts:
       - onepassword-afterinstall.sh
       - install-docker-compose-shim.sh
+      - install-lazydocker.sh
       - install-ms-fonts.sh
 
   - type: systemd
