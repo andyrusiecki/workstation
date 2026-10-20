@@ -30,7 +30,7 @@ jobs:
         recipe:
           # !! Add your recipes here
           - gnome.yml
-          - sway.yml
+          #- sway.yml # still experimental
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
