@@ -88,6 +88,7 @@ modules:
         - containerd.io 
         - docker-buildx-plugin
         - docker-compose-plugin
+        - pass
 
         # Browsers
         - google-chrome-stable
