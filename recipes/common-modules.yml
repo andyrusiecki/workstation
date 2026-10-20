@@ -144,7 +144,7 @@ modules:
     snippets:
       - "rm -r /etc/skel/.config/mozilla"
       - "curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | DIR=\"/usr/bin\" bash" # lazydocker
-      - "curl -sS https://starship.rs/install.sh | BIN_DIR=\"/usr/bin\" sh" # starship
+      - "curl -sS https://starship.rs/install.sh | sh -s -- -y --bin-dir /usr/bin" # starship
     scripts:
       - onepassword-afterinstall.sh
       - install-docker-compose-shim.sh
