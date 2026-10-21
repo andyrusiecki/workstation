@@ -150,6 +150,7 @@ modules:
     scripts:
       - onepassword-afterinstall.sh
       - install-docker-compose-shim.sh
+      - install-granola.sh
       - install-ms-fonts.sh
 
   - type: systemd
