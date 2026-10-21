@@ -183,8 +183,10 @@ modules:
           - io.github.celluloid_player.Celluloid
           - io.github.flattool.Warehouse
           - io.github.realmazharhussain.GdmSettings
+          - io.podman_desktop.PodmanDesktop
           - it.mijorus.gearlever
           - md.obsidian.Obsidian
+          - org.cryptomator.Cryptomator
           - org.libreoffice.LibreOffice
           - org.signal.Signal
           - us.zoom.Zoom
