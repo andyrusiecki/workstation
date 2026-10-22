@@ -13,7 +13,7 @@ esac
 install_dir="/usr/bin"
 
 # prepare the download URL
-repo="dgetsops/sops"
+repo="getsops/sops"
 version=$(curl -L -s -H 'Accept: application/json' https://github.com/${repo}/releases/latest | sed -e 's/.*"tag_name":"\([^"]*\)".*/\1/')
 
 download_file="sops-${version}.$(uname -s | tr '[:upper:]' '[:lower:]').${arch}"
