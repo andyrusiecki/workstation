@@ -4,19 +4,19 @@ set -euo pipefail
 
 root=$(mktemp -d)
 
-ARCH=$(uname -m)
-case $ARCH in
-    i386|i686) ARCH=amd64 ;;
-    armv6*) ARCH=armv6 ;;
-    armv7*) ARCH=armv7 ;;
-    aarch64*) ARCH=arm64 ;;
+arch=$(uname -m)
+case $arch in
+    i386|i686) arch=amd64 ;;
+    armv6*) arch=armv6 ;;
+    armv7*) arch=armv7 ;;
+    aarch64*) arch=arm64 ;;
 esac
 
-DIR="/usr/bin"
+install_dir="/usr/bin"
 
 # prepare the download URL
-GITHUB_REPO="docker/docker-credential-helpers"
-GITHUB_LATEST_VERSION=$(curl -L -s -H 'Accept: application/json' https://github.com/${GITHUB_REPO}/releases/latest | sed -e 's/.*"tag_name":"\([^"]*\)".*/\1/')
+repo="docker/docker-credential-helpers"
+version=$(curl -L -s -H 'Accept: application/json' https://github.com/${repo}/releases/latest | sed -e 's/.*"tag_name":"\([^"]*\)".*/\1/')
 
 helpers=(
   pass
@@ -25,11 +25,11 @@ helpers=(
 
 for helper in ${helpers[@]}
 do
-  local GITHUB_FILE="docker-credential-${helper}-${GITHUB_LATEST_VERSION}.$(uname -s | tr '[:upper:]' '[:lower:]')-${ARCH}"
-  local GITHUB_URL="https://github.com/${GITHUB_REPO}/releases/download/${GITHUB_LATEST_VERSION}/${GITHUB_FILE}"
+  download_file="docker-credential-${helper}-${version}.$(uname -s | tr '[:upper:]' '[:lower:]')-${arch}"
+  download_url="https://github.com/${repo}/releases/download/${version}/${download_file}"
 
-  curl -L -o $root/docker-credential-${helper} $GITHUB_URL
-  install -Dm 755 $root/docker-credential-${helper} -t "$DIR"
+  curl -L -o $root/docker-credential-${helper} $download_url
+  install -Dm 755 $root/docker-credential-${helper} -t "$install_dir"
 done
 
 # cleanup
