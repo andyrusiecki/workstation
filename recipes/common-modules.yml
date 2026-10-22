@@ -153,6 +153,7 @@ modules:
       - install-docker-credential-helpers.sh
       - install-granola.sh
       - install-ms-fonts.sh
+      - install-sops.sh
 
   - type: systemd
     system:
