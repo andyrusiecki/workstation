@@ -89,7 +89,6 @@ modules:
         - containerd.io 
         - docker-buildx-plugin
         - docker-compose-plugin
-        - pass
         - podman-compose
 
         # Browsers
@@ -151,6 +150,7 @@ modules:
     scripts:
       - onepassword-afterinstall.sh
       - install-docker-compose-shim.sh
+      - install-docker-credential-helpers.sh
       - install-granola.sh
       - install-ms-fonts.sh
 
