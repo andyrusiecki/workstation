@@ -6,6 +6,7 @@ root=$(mktemp -d)
 
 arch=$(uname -m)
 case $arch in
+    x86*) arch=amd64 ;;
     i386|i686) arch=amd64 ;;
     armv6*) arch=armv6 ;;
     armv7*) arch=armv7 ;;
