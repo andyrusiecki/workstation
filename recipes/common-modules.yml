@@ -84,9 +84,9 @@ modules:
 
         # Containers and virtualization
         - distrobox
-        - docker-ce 
-        - docker-ce-cli 
-        - containerd.io 
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
         - docker-buildx-plugin
         - docker-compose-plugin
         - podman-compose
@@ -152,6 +152,7 @@ modules:
       - install-docker-compose-shim.sh
       - install-docker-credential-helpers.sh
       - install-granola.sh
+      - install-kubetui.sh
       - install-ms-fonts.sh
       - install-sops.sh
 
