@@ -10,11 +10,66 @@ modules:
   - from-file: common-modules.yml
 
   - type: dnf
+    repos:
+      cleanup: true
+      copr:
+        - swayfx/swayfx
+
     group-install:
       allow-erasing: true
       packages:
         - swaywm
+        # swayvm packages:
+        # - sway
+        # - swaybg
+        # - swayidle
+        # - swaylock
+        # - dunst
+        # - foot
+        # - grim
+        # - polkit
+        # - slurp
+        # - tuned-ppd
+        # - tuned-switcher
+        # - waybar
+        # - xdg-desktop-portal-wlr
+        # - xorg-x11-server-Xwayland
         - swaywm-extended
+        # swayvm-extended packages:
+        # - sway-config-fedora
+        # - NetworkManager-l2tp-gnome
+        # - NetworkManager-libreswan-gnome
+        # - NetworkManager-openconnect-gnome
+        # - NetworkManager-openvpn-gnome
+        # - NetworkManager-sstp-gnome
+        # - NetworkManager-vpnc-gnome
+        # - Thunar
+        # - blueman
+        # - bolt
+        # - fprintd-pam
+        # - git-core
+        # - gnome-keyring-pam
+        # - gvfs
+        # - gvfs-smb
+        # - imv
+        # - kanshi
+        # - lxqt-policykit
+        # - mpv
+        # - network-manager-applet
+        # - pavucontrol
+        # - pinentry-gnome3
+        # - playerctl
+        # - pulseaudio-utils
+        # - sddm
+        # - sddm-wayland-sway
+        # - system-config-printer
+        # - thunar-archive-plugin
+        # - wev
+        # - wl-clipboard
+        # - wlr-randr
+        # - wlsunset
+        # - xarchiver
+        # - xdg-desktop-portal-gtk
     install:
       packages:
         - brightnessctl
@@ -22,6 +77,11 @@ modules:
         - rofi
         - sway-contrib
         - wiremix
+
+    replace:
+      packages:
+        - old: sway
+          new: swayfx
 
   - type: systemd
     system:
