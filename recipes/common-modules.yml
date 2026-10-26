@@ -148,13 +148,13 @@ modules:
       - "curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | DIR=\"/usr/bin\" bash" # lazydocker
       - "curl -sS https://starship.rs/install.sh | sh -s -- -y --bin-dir /usr/bin" # starship
     scripts:
-      - onepassword-afterinstall.sh
       - claude-desktop.sh
       - docker-compose-shim.sh
       - docker-credential-helpers.sh
       - granola.sh
       - kubetui.sh
       - ms-fonts.sh
+      - onepassword-afterinstall.sh
       - sops.sh
 
   - type: systemd
