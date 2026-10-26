@@ -149,12 +149,13 @@ modules:
       - "curl -sS https://starship.rs/install.sh | sh -s -- -y --bin-dir /usr/bin" # starship
     scripts:
       - onepassword-afterinstall.sh
-      - install-docker-compose-shim.sh
-      - install-docker-credential-helpers.sh
-      - install-granola.sh
-      - install-kubetui.sh
-      - install-ms-fonts.sh
-      - install-sops.sh
+      - claude-desktop.sh
+      - docker-compose-shim.sh
+      - docker-credential-helpers.sh
+      - granola.sh
+      - kubetui.sh
+      - ms-fonts.sh
+      - sops.sh
 
   - type: systemd
     system:
