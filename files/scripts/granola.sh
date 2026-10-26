@@ -31,5 +31,8 @@ export DESKTOP_FILE="/usr/share/applications/granola.desktop"
 
 ./granola-linux.sh ../Granola.dmg
 
+# custom changes
+sed -i 's#Icon=.*#Icon=/opt/granola/resources/icons/mac-icon.png#' /usr/share/applications/granola.desktop
+
 # cleanup
 rm -rf $root
