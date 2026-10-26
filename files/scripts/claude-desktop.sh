@@ -15,8 +15,6 @@ root=$(mktemp -d)
 
 dnf install -y "${dependencies[@]}"
 
-chroot $root /bin/bash -c ""
-
 git clone --depth 1 https://github.com/dewzor/claude-desktop-fedora.git $root/claude-desktop-fedora
 
 # build
