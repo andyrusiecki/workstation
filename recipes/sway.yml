@@ -4,7 +4,7 @@ name: workstation-sway
 description: Personal workstation using Sway
 
 base-image: ghcr.io/blue-build/base-images/fedora-base
-image-version: latest
+image-version: 44
 
 modules:
   - from-file: common-modules.yml
@@ -76,6 +76,7 @@ modules:
         - matugen
         - rofi
         - sway-contrib
+        - sway-systemd
         - wiremix
 
     replace:
