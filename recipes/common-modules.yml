@@ -54,6 +54,7 @@ modules:
         - nodejs-npm
         - nss-tools
         - https://opencode.ai/download/stable/linux-x64-rpm # OpenCode Desktop
+        - php
         - rust
         - rust-src
 
