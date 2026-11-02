@@ -65,6 +65,7 @@ modules:
         - zsh-syntax-highlighting
 
         # CLI tools and tui apps
+        - 7zip
         - age
         - awscli2
         - bat
