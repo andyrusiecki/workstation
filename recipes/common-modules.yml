@@ -224,3 +224,6 @@ modules:
           - org.gnome.font-viewer
           - org.gnome.gitlab.somas.Apostrophe
 
+  # Required to change plymouth theme watermark
+  # move to other recipes if changing kernel modules or other plymouth settings
+  - type: initramfs
