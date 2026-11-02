@@ -5,6 +5,7 @@
 set -euo pipefail
 
 dependencies=(
+  7zip-standalone-all
   gcc-c++
   nodejs
   npm
