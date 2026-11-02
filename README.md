@@ -12,10 +12,6 @@ Note: Instructions below all use `workstation` as the image name.
 
 ## Installation
 
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
 To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
