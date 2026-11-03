@@ -4,7 +4,7 @@ name: workstation
 description: Personal workstation using GNOME
 
 base-image: ghcr.io/blue-build/base-images/fedora-silverblue
-image-version: 44
+image-version: latest
 
 modules:
   - from-file: common-modules.yml
