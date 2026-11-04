@@ -19,9 +19,6 @@ idle-delay=uint32 900
 [org.gnome.evolution-data-server.calendar]
 notify-enable-audio=false
 
-[org.gnome.mutter]
-experimental-features=['scale-monitor-framebuffer']
-
 [org.gnome.settings-daemon.plugins.color]
 night-light-enabled=true
 night-light-temperature=uint32 3700
