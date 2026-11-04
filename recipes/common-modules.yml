@@ -53,7 +53,6 @@ modules:
         - nodejs
         - nodejs-npm
         - nss-tools
-        - https://opencode.ai/download/stable/linux-x64-rpm # OpenCode Desktop
         - php
         - rust
         - rust-src
@@ -147,7 +146,6 @@ modules:
     snippets:
       - "rm -r /etc/skel/.config/mozilla"
       - "curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | DIR=\"/usr/bin\" bash" # lazydocker
-      - "curl -fsSL https://opencode.ai/v2/install | INSTALL_DIR=\"/usr/bin\" bash -s -- --no-modify-path" # opencode
       - "curl -sS https://starship.rs/install.sh | sh -s -- -y --bin-dir /usr/bin" # starship
     scripts:
       - claude-desktop.sh
