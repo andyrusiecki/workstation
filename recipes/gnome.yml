@@ -31,7 +31,7 @@ modules:
       - Just Perfection
       - In Picture
       - Night Theme Switcher
-      - Rounded Window Corners Reborn
+      #- Rounded Window Corners Reborn # not yet supported in Gnome 51
 
   - type: gschema-overrides
     include:
