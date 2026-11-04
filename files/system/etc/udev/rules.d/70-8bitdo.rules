@@ -1,0 +1,2 @@
+# Enabling access for all 8BitDo products
+SUBSYSTEM=="usb", ATTR{idVendor}=="2dc8", MODE="0666"
