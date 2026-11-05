@@ -145,7 +145,6 @@ modules:
   - type: script
     snippets:
       - "rm -r /etc/skel/.config/mozilla"
-      - "curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | DIR=\"/usr/bin\" bash" # lazydocker
       - "curl -sS https://starship.rs/install.sh | sh -s -- -y --bin-dir /usr/bin" # starship
     scripts:
       - claude-desktop.sh
@@ -153,6 +152,7 @@ modules:
       - docker-credential-helpers.sh
       - granola.sh
       - kubetui.sh
+      - lazydocker.sh
       - ms-fonts.sh
       - onepassword-afterinstall.sh
       - sops.sh
