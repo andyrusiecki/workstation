@@ -155,6 +155,7 @@ modules:
       - lazydocker.sh
       - ms-fonts.sh
       - onepassword-afterinstall.sh
+      - openwhispr.sh
       - sops.sh
 
   - type: systemd
