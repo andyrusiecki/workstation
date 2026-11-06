@@ -24,7 +24,7 @@ download_file="lazydocker_${version//v/}_$(uname -s)_${arch}.tar.gz"
 download_url="https://github.com/${repo}/releases/download/${version}/${download_file}"
 
 curl -L -o $root/lazydocker.tar.gz $download_url
-tar xzvf $root/lazydocker.tar.gz $root/lazydocker
+tar xzvf $root/lazydocker.tar.gz
 install -Dm 755 $root/lazydocker -t "$install_dir"
 
 # cleanup
