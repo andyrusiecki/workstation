@@ -21,7 +21,6 @@ modules:
 
       keys:
         - https://downloads.1password.com/linux/keys/1password.asc # 1password
-        - https://download.docker.com/linux/fedora/gpg # docker
         - https://cli.github.com/packages/githubcli-archive-keyring.asc # github cli
         - https://dl.google.com/linux/linux_signing_key.pub # google chrome
         - https://packages.microsoft.com/keys/microsoft.asc # vscode
@@ -29,7 +28,6 @@ modules:
       files:
         - 1password.repo # 1password
         - claude-code.repo # claude code
-        - https://download.docker.com/linux/fedora/docker-ce.repo # docker
         - https://cli.github.com/packages/rpm/gh-cli.repo # github cli
         - google-chrome.repo # google chrome
         - https://kubecolor.github.io/packages/rpm/kubecolor.repo # kubecolor
@@ -84,12 +82,8 @@ modules:
 
         # Containers and virtualization
         - distrobox
-        - docker-ce
-        - docker-ce-cli
-        - containerd.io
-        - docker-buildx-plugin
-        - docker-compose-plugin
-        - podman-compose
+        - docker # moby-engine, docker-cli, docker-buildx, ...
+        - docker-compose # docker-compose, docker-compose-switch
 
         # Browsers
         - google-chrome-stable
