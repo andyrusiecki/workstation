@@ -142,7 +142,6 @@ modules:
       - "curl -sS https://starship.rs/install.sh | sh -s -- -y --bin-dir /usr/bin" # starship
     scripts:
       - claude-desktop.sh
-      - docker-compose-shim.sh
       - docker-credential-helpers.sh
       - granola.sh
       - kubetui.sh
