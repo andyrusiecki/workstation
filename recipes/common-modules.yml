@@ -196,7 +196,6 @@ modules:
           - org.gtk.Gtk3theme.adw-gtk3-dark
 
           # Gnome applications (likely to move to gnome recipe)
-          - org.gnome.Boxes
           - org.gnome.Loupe
           - org.gnome.Calculator
           - org.gnome.Calendar

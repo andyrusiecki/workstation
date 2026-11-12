@@ -15,6 +15,7 @@ modules:
         # GNOME additions
         - adw-gtk3-theme
         - ffmpegthumbnailer
+        - gnome-boxes
         - gnome-tweaks
 
   - type: script
