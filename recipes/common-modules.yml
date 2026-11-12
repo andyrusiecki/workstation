@@ -48,6 +48,7 @@ modules:
         - kubernetes1.33-client
         - make
         - mkcert
+        - nix
         - nodejs
         - nodejs-npm
         - nss-tools
