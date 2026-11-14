@@ -1,0 +1,13 @@
+[Unit]
+Description=Create persistent Nix directory in /var
+DefaultDependencies=no
+RequiresMountsFor=/var
+Before=nix.mount
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/mkdir -p /var/lib/nix/store /var/lib/nix/var/nix/daemon-socket
+
+[Install]
+RequiredBy=nix.mount

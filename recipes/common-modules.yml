@@ -139,8 +139,9 @@ modules:
 
   - type: script
     snippets:
-      - "rm -r /etc/skel/.config/mozilla"
-      - "curl -sS https://starship.rs/install.sh | sh -s -- -y --bin-dir /usr/bin" # starship
+      - "rm -r /etc/skel/.config/mozilla" # removing default firefox config
+      - "curl -sS https://starship.rs/install.sh | sh -s -- -y --bin-dir /usr/bin" # install starship
+      - "mkdir -p /nix" # empty mount for nix store
     scripts:
       - claude-desktop.sh
       - docker-credential-helpers.sh
@@ -157,6 +158,8 @@ modules:
       enabled:
         - containerd.service
         - docker.service
+        - nix.mount
+        - nix-daemon.socket
         - tailscaled.service
     user:
       enabled:
