@@ -142,6 +142,7 @@ modules:
       - "rm -r /etc/skel/.config/mozilla" # removing default firefox config
       - "curl -sS https://starship.rs/install.sh | sh -s -- -y --bin-dir /usr/bin" # install starship
       - "mkdir -p /nix" # empty mount for nix store
+      - "semanage fcontext -a -t var_run_t '/var/lib/nix/var/nix/daemon-socket(/.*)?'" # nix SELinux labeling
     scripts:
       - claude-desktop.sh
       - docker-credential-helpers.sh

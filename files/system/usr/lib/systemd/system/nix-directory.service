@@ -8,6 +8,8 @@ Before=nix.mount
 Type=oneshot
 RemainAfterExit=yes
 ExecStart=/usr/bin/mkdir -p /var/lib/nix/store /var/lib/nix/var/nix/daemon-socket
+ExecStart=/usr/sbin/restorecon -F /var/lib/nix /var/lib/nix/store /var/lib/nix/var /var/lib/nix/var/nix
+ExecStart=/usr/sbin/restorecon -RF /var/lib/nix/var/nix/daemon-socket
 
 [Install]
 RequiredBy=nix.mount
