@@ -31,7 +31,6 @@ modules:
         - https://cli.github.com/packages/rpm/gh-cli.repo # github cli
         - google-chrome.repo # google chrome
         - https://kubecolor.github.io/packages/rpm/kubecolor.repo # kubecolor
-        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo # terra repo (zed)
         - vscode.repo # vscode
 
     install:
@@ -55,7 +54,6 @@ modules:
         - php
         - rust
         - rust-src
-        - zed
 
         # Terminal and shells
         - fish
@@ -76,7 +74,7 @@ modules:
         - gh
         - lazygit
         - neovim
-        - ripgrep
+        - ri   # removes the Terra repo file after this module runspgrep
         - wl-clipboard
         - yazi
         - yq
@@ -110,6 +108,17 @@ modules:
       packages:
         - fedora-bookmarks
         - toolbox
+
+  - type: dnf
+    repos:
+      cleanup: true
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+    install:
+      packages:
+        - repo: terra
+          packages:
+            - zed
 
   - type: brew
     nofile-limits: true
