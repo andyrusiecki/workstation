@@ -157,6 +157,7 @@ modules:
       - google-workspace-cli.sh
       - granola.sh
       - hermes.sh
+      - jolt.sh
       - kubetui.sh
       - lazydocker.sh
       - ms-fonts.sh
