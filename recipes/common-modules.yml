@@ -74,7 +74,7 @@ modules:
         - gh
         - lazygit
         - neovim
-        - ri   # removes the Terra repo file after this module runspgrep
+        - ripgrep
         - wl-clipboard
         - yazi
         - yq

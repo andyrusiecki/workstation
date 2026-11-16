@@ -1,5 +1,5 @@
 [Unit]
-Descriptsystemd: command not foundion=Bind-mount /var/lib/nix onto /nix
+Description=Bind-mount /var/lib/nix onto /nix
 Requires=nix-directory.service
 After=nix-directory.service
 RequiresMountsFor=/var/lib/nix
