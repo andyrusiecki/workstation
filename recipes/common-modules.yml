@@ -155,6 +155,7 @@ modules:
       - claude-desktop.sh
       - docker-credential-helpers.sh
       - granola.sh
+      - hermes.sh
       - kubetui.sh
       - lazydocker.sh
       - ms-fonts.sh
