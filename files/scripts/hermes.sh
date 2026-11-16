@@ -6,4 +6,4 @@ set -euo pipefail
 curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash -s -- --include-desktop --hermes-home /opt/hermes --skip-setup --skip-browser --skip-computer-use
 
 # cleanup
-ln -s /opt/hermes/.hermes/bin/hermes /usr/bin/hermes
+ln -s /opt/hermes/hermes-agent/hermes /usr/bin/hermes
