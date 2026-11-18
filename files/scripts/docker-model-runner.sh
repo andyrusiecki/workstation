@@ -15,7 +15,7 @@ git clone --depth 1 https://github.com/docker/model-runner.git $root/model-runne
 
 # build in chroot
 (
-  cd /model-runner
+  cd $root/model-runner
   make build-cli
   make install-cli
 )
