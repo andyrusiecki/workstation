@@ -154,10 +154,8 @@ modules:
     scripts:
       - claude-desktop.sh
       - docker-credential-helpers.sh
-      - docker-model-runner.sh
       - google-workspace-cli.sh
       - granola.sh
-      #- hermes.sh
       - jolt.sh
       - kubetui.sh
       - lazydocker.sh
