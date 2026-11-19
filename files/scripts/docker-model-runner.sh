@@ -5,6 +5,8 @@ set -euo pipefail
 dependencies=(
   cmake
   gcc-c++
+  openssl-devel
+  pkgconf-pkg-config
 )
 
 root=$(mktemp -d)
