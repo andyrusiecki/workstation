@@ -152,7 +152,7 @@ modules:
       - "rm -r /etc/skel/.config/mozilla" # removing default firefox config
       - "curl -sS https://starship.rs/install.sh | sh -s -- -y --bin-dir /usr/bin" # install starship
     scripts:
-      - claude-desktop.sh
+      - claude-desktop-experimental.sh
       - docker-credential-helpers.sh
       - google-workspace-cli.sh
       - granola.sh
