@@ -84,6 +84,7 @@ modules:
         - distrobox
         - docker # moby-engine, docker-cli, docker-buildx, ...
         - docker-compose # docker-compose, docker-compose-switch
+        - virt-manager
 
         # Browsers
         - google-chrome-stable
