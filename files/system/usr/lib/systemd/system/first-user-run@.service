@@ -1,0 +1,7 @@
+[Unit]
+Description=Run first-user-run for %i
+After=local-fs.target systemd-sysusers.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/first-user-run %i

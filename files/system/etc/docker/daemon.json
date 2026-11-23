@@ -1,3 +1,4 @@
 {
+    "ip-forward-no-drop": true,
     "selinux-enabled": false
 }

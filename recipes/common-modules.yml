@@ -84,6 +84,10 @@ modules:
         - distrobox
         - docker # moby-engine, docker-cli, docker-buildx, ...
         - docker-compose # docker-compose, docker-compose-switch
+        - libvirt-daemon-kvm
+        - libvirt-daemon-config-network   # defines the 'default' NAT network and sets it to autostart
+        - dnsmasq
+        - edk2-ovmf                       # UEFI firmware for firmware='efi'
         - virt-manager
 
         # Browsers
@@ -174,6 +178,10 @@ modules:
         - nix.mount
         - nix-daemon.socket
         - tailscaled.service
+        - virtqemud.socket
+        - virtnetworkd.socket
+        - virtlogd.socket
+        - virtstoraged.socket
     user:
       enabled:
         - podman.socket

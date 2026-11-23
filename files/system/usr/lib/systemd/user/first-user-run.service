@@ -1,0 +1,9 @@
+[Unit]
+Description=Run first-user-run for the current user
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl start first-user-run@%u.service
+
+[Install]
+WantedBy=default.target

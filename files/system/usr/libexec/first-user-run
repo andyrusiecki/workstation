@@ -1,0 +1,39 @@
+#!/usr/bin/bash
+# Usage: first-user-run <username>
+#
+# Per-user setup, run as root at each login via first-user-run@<user>.service.
+# Every step must be safe to repeat: check first, change only if needed.
+
+set -euo pipefail
+
+user="${1:-}"
+if [[ -z "$user" ]]; then
+    echo "Usage: $0 <username>" >&2
+    exit 1
+fi
+if ! id -u "$user" >/dev/null 2>&1; then
+    echo "User '${user}' does not exist." >&2
+    exit 1
+fi
+
+# Groups
+GROUPS_TO_ADD="libvirt docker"
+
+for group in $GROUPS_TO_ADD; do
+    if ! grep -q "^${group}:" /etc/group; then
+        line=$(grep "^${group}:" /usr/lib/group || true)
+        if [[ -z "$line" ]]; then
+            echo "Group '${group}' not found in /etc/group or /usr/lib/group; skipping."
+            continue
+        fi
+        echo "$line" >> /etc/group
+        echo "Copied group '${group}' into /etc/group."
+    fi
+
+    members=$(grep "^${group}:" /etc/group | cut -d: -f4)
+    if [[ ",${members}," == *",${user},"* ]]; then
+        continue
+    fi
+    usermod -aG "$group" "$user"
+    echo "Added '${user}' to '${group}'."
+done

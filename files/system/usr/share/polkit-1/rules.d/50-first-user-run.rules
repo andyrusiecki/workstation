@@ -1,0 +1,10 @@
+// Let each user start first-user-run@<their own username>.service without a
+// password prompt. Starting it for any other user still requires admin
+// authentication.
+polkit.addRule(function(action, subject) {
+    if (action.id == "org.freedesktop.systemd1.manage-units" &&
+        action.lookup("verb") == "start" &&
+        action.lookup("unit") == "first-user-run@" + subject.user + ".service") {
+        return polkit.Result.YES;
+    }
+});
