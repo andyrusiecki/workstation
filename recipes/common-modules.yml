@@ -91,7 +91,11 @@ modules:
         - virt-manager
 
         # Browsers
-        - google-chrome-stable
+        ## Pinning Google Chrome until chunkah supports rpm6 packages
+        ## https://github.com/coreos/chunkah/issues/189
+        ## https://github.com/jlebon/rpm-qa-rs/pull/13
+        - https://dl.google.com/linux/chrome/rpm/stable/x86_64/google-chrome-stable-157.0.8103.38-1.x86_64.rpm
+        # - google-chrome-stable
 
         # Gaming
         - https://discord.com/api/download?platform=linux&format=rpm # discord
