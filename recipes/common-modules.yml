@@ -129,16 +129,6 @@ modules:
           packages:
             - zed
 
-  - type: brew
-    nofile-limits: true
-    brew-analytics: false
-    auto-update: true
-    update-interval: 1d
-    update-wait-after-boot: 5m
-    auto-upgrade: true
-    upgrade-interval: 1d
-    upgrade-wait-after-boot: 10m
-
   - type: fonts
     fonts:
       nerd-fonts:
